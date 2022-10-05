@@ -1,2 +1,2 @@
 # freecodecamp-projects
-#f
+My freecodecamp projects journey
