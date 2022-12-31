@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>CSS Documentation</header>
+      <ul>
+        <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+        <li><a class="nav-link" href="#Syntax">Syntax</a></li>
+        <li><a class="nav-link" href="#Element_selector">Element selector</a></li>
+        <li><a class="nav-link" href="#Id_selector">Id selector</a></li>
+        <li><a class="nav-link" href="#Class_selector">Class selector</a></li>
+        <li><a class="nav-link" href="#Pseudo_class_selector">Pseudo class selector</a></li>
+        <li><a class="nav-link" href="#Pseudo_element_selector">Pseudo element selector</a></li>
+        <li><a class="nav-link" href="#Attribute_selector">Attribute selector</a></li>
+      </ul>
+    </nav>
+
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header>Introduction</header>
+        <article>
+          <p>CSS is the language that we use to style an HTML document. It stands for Cascading Style Sheets.</p>
+          <p>Three Ways to Insert CSS</p>
+          <ol>
+            <li>Inline <span> - used to apply a unique style for a single element.</span> <code>&lt;p style=&quot;color:green;&quot;&gt;This is a paragraph&lt;/p&gt;</code></li>
+            <li>Internal <span> - used if one single HTML page has a unique style. It is defined inside the &ltstyle&gt element, inside the head section.</span> <code>&lt;style&gt; <br> &nbsp;&nbsp; p { background-color: black; }<br>&lt;/style&gt;</code></li>
+            <li>External <span>- change the look of an entire website by changing just one file. It must include a reference to the external style sheet file inside the <link> element, inside the head section.</span> <code>&lt;link rel="stylesheet" href="mystyle.css"&gt;</code></li>
+          </ol>
+        </article>
+      </section>
+
+      <section class="main-section" id="Syntax">
+        <header>Syntax</header>
+        <article>
+          <code>&lt;p&gt;</code><em> - Selector</em>
+          <br/>
+          <code>{<br/> &nbsp;&nbsp; display:inline-block; <br/> &nbsp;&nbsp; color: blue;
+            <br/>}</code><em> - Declaration Block</em><br/>
+            <code>display</code><em> - Property Name</em><code>inline-block</code><em> - Property Value</em>
+            <p>Selector directs you to the HTML element that you want to style.</p>
+            <p>Declaration Block compose of one or more declaration separated by semicolons. It includes a CSS property name and a value, separated by a colon.</p>
+        </article>
+      </section>
+
+      <section class="main-section" id="Element_selector">
+        <header>Element selector</header>
+        <article>
+        <p>A selector based on elements name.</p><br/>
+        <span>Example:</span>
+        <span>h1 p ol li ul section nav</span>
+        </article>
+      </section>
+
+      <section class="main-section" id="Id_selector">
+        <header>Id selector</header>
+        <article>
+          <p>It uses the id attribute of an element to select specific element. It is used to select one unique element. To select an element write a hash(#) character followed by an id name.</p><br/>
+          <span>Example:</span>
+          <span>&lt;p id="prgrph1"&gt;This is a first paragraph.&lt;/p&gt;</span>
+          <span>#prgrph1 {<br/> &nbsp; &nbsp; color:grey; background: black;<br/>}</span>
+        </article>
+      </section>
+
+      <section class="main-section" id="Class_selector">
+        <header>Class selector</header>
+        <article>
+          <p>It used the class attribute of an element. To select an element write a period(.) character followed by an id name.</p>
+          <span>Example:</span>
+          <span>&lt;p class="prgrph2"&gt;This is a second paragraph.&lt;/p&gt;</span>
+          <span>.prgrph2 {<br/> &nbsp; &nbsp; border: 1px dotted blue; margin: 10px auto;<br/>}</span>
+        </article>
+      </section>
+
+      <section class="main-section" id="Pseudo_class_selector">
+        <header>Pseudo class selector</header>
+        <article>
+          <p>It is used to define a special state for an element. It can be use to change a style once it hover, focus or any other state.</p>
+          <span>Example:</span>
+          <span>a:hover {<br/> &nbsp; &nbsp; color: yellow;<br/> }</span>
+          <p>:hover is a pseudo-class selector, used to select elements when you mouse over them. </p>
+          <div class="other_container">
+            <p>Other pseudo-class selector</p>
+            <div class="other_selectors">
+              <span>:focus</span>
+              <span>:nth-child(n)</span>
+              <span>:disabled</span>
+              <span>:not(selector)</span>
+              <span>:required</span>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="main-section" id="Pseudo_element_selector">
+        <header>Pseudo element selector</header>
+        <article>
+          <p>It is used to style specific parts of an element.</p>
+          <span>Example:</span>
+          <span>p::first-letter {<br/>  &nbsp; &nbsp; font-size: 3em; font-style: italic;<br/> }</span>
+          <p>::first-letter is a pseudo-element, used to add a special style to the first letter of a text.</p>
+          <div class="other_container">
+            <p>Other pseudo-element selector</p>
+            <div class="other_selectors">
+              <span>::after</span>
+              <span>::before</span>
+              <span>::first-line</span>
+              <span>::marker</span>
+              <span>::selection</span>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="main-section" id="Attribute_selector">
+        <header>Attribute selector</header>
+        <article>
+          <p>Style HTML elements using specific attributes or attribute values.</p>
+          <ol>
+            <li>[attribute] selector <span> - used to select elements with a specific attribute.</span><code>a[target] { <br/> &nbsp; &nbsp; background-color: black;<br/> &nbsp; &nbsp; color: white; <br/> }</code></li>
+            <li>[attribute="value"] selector <span> - used to select elements with a specified attribute and value.</span><code>div[class="main-container"] { <br/> &nbsp; &nbsp; border: 5px double pink;<br/> &nbsp; &nbsp; padding: 10px; <br/> }</code></li>
+            <li>[attribute~="value"] selector <span> - used to select elements with an attribute value containing a specified word. Attribute that contains a space-separated list of words.</span><code>[class~="container"] { <br/> &nbsp; &nbsp; background-color: violet; <br/> }</code></li>
+            <li>[attribute|="value"] selector <span> - used to select elements with the specified attribute, whose value can be exactly the specified value, or the specified value followed by a hyphen (-).</span><code>[class|="value"] { <br/> &nbsp; &nbsp; border-bottom: 1px solid red; <br/> }</code></li>
+            <li>[attribute^="product"] selector <span> - used to select elements with the specified attribute, whose value starts with the specified value.</span><code>[class^="value"] { <br/> &nbsp; &nbsp; background-color: grey;<br/> &nbsp; &nbsp; padding: 15px; <br/>  }</code></li>
+            <li>[attribute$="value"] selector <span> - used to select elements whose attribute value ends with a specified value.</span><code>[class$="value"] { <br/> &nbsp; &nbsp; border-bottom: 1px solid red; <br/> }</code></li>
+            <li>[attribute*="container"] selector <span> - used to select elements whose attribute value contains a specified value.</span><code>[class*="container"] { <br/> &nbsp; &nbsp; padding: 20px; <br/> }</code></li>
+          </ol>
+        </article>        
+      </section>
+    </main>
+  </body>
+</html>
