@@ -1,0 +1,147 @@
+html {
+	scroll-behavior: smooth;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+nav ul {
+  border-top: 5px solid transparent;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  display: block;
+  padding-left:5px;
+  height: 45px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  vertical-align: middle;
+}
+li a {
+  text-decoration: none;
+  color: #47090f;
+  display: block;
+  margin: 0 -2px;
+  padding: 10px;
+}
+li a:hover {
+  background: white;
+  color: black;
+  border-radius: 10px;
+}
+main {
+  margin: 50px 10px 0;
+  padding: 10px;
+}
+section header {
+  color: #47090f;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 5px;
+  display: inline-block;
+}
+section {
+  border-bottom: 1px solid #47090f;
+  color: #363636;
+  padding: 10px;
+  margin: 20px auto;
+}
+article > p {
+  color: black;
+}
+article {
+  padding: 15px 10px;
+}
+p {
+  margin: 10px 0;
+}
+ol {
+  margin-left: 30px;
+}
+ol li {
+  margin: 15px 0;
+  font-weight: bold;
+  color: black;
+}
+ol li code {
+  color: #363636;
+  font-weight: normal;
+  font-style: italic;
+}
+ol li span {
+  color: #121212;
+  font-weight: normal;  
+}
+span, code {
+  display: block;
+  margin: 5px 0 10px 20px;
+}
+em {
+  color: #47090f;
+}
+
+
+
+#navbar {
+  background: gainsboro;
+  border-bottom: 5px solid transparent;
+}
+#navbar header {
+  background: #47090f;
+  color: white;
+  font-size: 2em;
+  font-weight: bold;
+  padding: 20px;
+}
+.main-section:nth-child(2) code {
+  background: gainsboro;
+  border-radius: 20px;
+  display: inline-block;
+  padding: 10px;
+}
+.other_container > p {
+  color: #47090f;
+}
+
+
+
+@media (min-width: 1024px) {
+  #navbar {
+    background: grainsboro;
+    position: fixed;
+    width: 25%;
+    height: 100%;
+    z-index: 1;
+  }
+  #navbar header {
+    font-size: 1.7em;
+  }
+  nav ul {
+    border-right: none;
+    height: auto;
+    padding: 0;
+  }
+  nav ul li {
+    display: block;
+  }
+  li a {
+    padding: 12px 15px;
+    margin: 0;
+  }
+  li a:hover {
+    padding-left: 30px;
+    margin: 0;
+    border-radius: 10px 0 0 10px;
+  }
+  main {
+    position: absolute;
+    width: calc(75% - 40px);
+    margin: 20px;
+    right: 0;
+    top: 80px;
+  }
+}
