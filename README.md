@@ -1,2 +1,2 @@
 # freecodecamp-projects
-My freecodecamp projects journey
+My freecodecamp responsive web design projects journey
