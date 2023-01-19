@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Courier New;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0 15px 15px;
+  background: white;
+  position: relative;
+}
+
+ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+ul li {
+  display: inline-block;
+  margin: 10px;
+}
+li a {
+  font-size: 1em;
+  display: inline-block;
+  padding: 10px;
+  color: #212121;
+  text-decoration: none;
+}
+li a:hover {
+  font-size: 1.01em;
+  color: rgb(181, 27, 135);
+  border-bottom: 1px solid grey;
+  transition: all 200ms;
+}
+
+nav {
+  background: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+h1 {
+  margin: 10px 10px 30px;
+  font-size: 3em;
+  font-family: Georgia;
+  color: #212121;
+}
+#title {
+  text-align: center;
+  padding: 20px 10px;
+}
+#title-p {
+  font-weight: bold;
+  font-size: 2em;
+  font-family: Georgia;
+  display: inline;
+  color: rgb(181, 27, 135);
+}
+#bottom {
+  height: 15px;
+  position: fixed;
+  z-index: 9;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: white;
+}
+
+
+#welcome-section {
+  background-image: url('https://andreayad.github.io/freecodecamp-projects/images/welcome.jpg');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+#welcome-section p {
+  font-size: 1.1em;
+  padding: 1px 10px;
+  color: white;
+  background: rgba(181, 27, 135, 60%);
+  margin: 3px;
+}
+#welcome-name {
+  font-size: 2em !important;
+  padding: 5px !important;
+}
+#projects {
+  text-align: center;
+  padding: 100px 0;
+  background: #212121;
+}
+
+#contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;  
+  height: 100vh;
+  background-image: url('https://andreayad.github.io/freecodecamp-projects/images/contact.jpg');
+  background-size: cover;
+  padding: 50px;
+}
+#contact p {
+  font-size: 2em;
+  text-align: center;
+  padding: 10px;
+  color: white;
+  background: rgba(181, 27, 135, 60%);  
+}
+.contact-container {
+  margin: 20px;
+  display: grid;
+}
+
+
+
+#profile-link img {  
+  height: 50px;
+  padding-right: 10px;
+  vertical-align: middle;
+}
+#profile-link {
+  text-decoration: none;
+  color: #212121;
+  padding: 10px 15px;
+}
+#profile-link:hover {
+  transform: translateX(10px);
+  transition: all 150ms;
+}
+
+#project-sec {
+  color: #f2f2f2;
+  font-size: 2em;
+  margin-bottom: 50px;
+  font-family: Georgia;
+}
+.project-tile {
+  margin: 20px 10px;
+  background: white;
+  width: 270px;
+  height: 250px;
+  display: inline-block;
+}
+.project-tile img {
+  width: 100%;
+  height: 100%;
+}
+.project-tile a {
+  display: contents;
+text-decoration: none;
+  border: 7px solid white;
+  margin: 20px;
+  padding: 10px;
+}
+.project-tile a p {
+  color: white;
+  padding: 15px;
+  background: rgb(181, 27, 135);
+}
+.project-tile:hover {
+  box-shadow: 1px 3px 20px rgb(181 27 135);
+  transition: all 100ms;
+}
+.project-tile a:hover p {
+  color: rgb(181, 27, 135);
+  background: white;
+}
+
+@media screen and (min-width: 768px) {
+  #title {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 12px 30px;
+  }
+  ul {
+    display: inline-block;
+    float: right;
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .project-tile:hover {
+      transform: translateY(-10px);
+  }
+}
